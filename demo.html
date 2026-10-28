@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Thunder VPN 节点池 · 逆向 Demo</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121b2e; --line:#1e2b45; --txt:#e6edf7;
+    --dim:#8ea0bd; --ok:#2ecc71; --warn:#f1c40f; --bad:#e74c3c; --acc:#38bdf8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+       font:14px/1.55 ui-monospace,"Cascadia Code",Consolas,monospace}
+  header{padding:18px 22px;border-bottom:1px solid var(--line);
+         display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  h1{font-size:17px;margin:0;font-weight:600;letter-spacing:.3px}
+  .tag{font-size:11px;padding:2px 8px;border-radius:99px;
+       background:#1b2a44;color:var(--acc);border:1px solid #274866}
+  .wrap{padding:18px 22px;display:grid;gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .card h2{font-size:12px;margin:0 0 10px;color:var(--dim);
+           text-transform:uppercase;letter-spacing:1px;font-weight:600}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  button{cursor:pointer;background:#1c3a5e;color:#cfe6ff;border:1px solid #2a5480;
+         padding:7px 14px;border-radius:7px;font:inherit;font-size:13px;transition:.15s}
+  button:hover{background:#24507f}
+  button.ghost{background:transparent;border-color:var(--line);color:var(--dim)}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid #17233a}
+  th{color:var(--dim);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+  tr:hover td{background:#16233a}
+  .ok{color:var(--ok)} .warn{color:var(--warn)} .bad{color:var(--bad)} .dim{color:var(--dim)}
+  .kv{display:grid;grid-template-columns:130px 1fr;gap:4px 12px;font-size:12.5px}
+  .kv span:nth-child(odd){color:var(--dim)}
+  code{background:#0d1728;padding:1px 6px;border-radius:4px;font-size:12px;color:#9ad4ff}
+  .hint{font-size:12px;color:var(--dim);margin-top:8px;line-height:1.7}
+  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Thunder VPN 节点池 · 逆向 Demo</h1>
+  <span class="tag" id="pkg">com.fast.free.unblock.thunder.vpn</span>
+  <span class="tag">v5.4.1 / 202604131</span>
+  <span class="tag">SignalLab · 私有隧道</span>
+</header>
+
+<div class="wrap">
+  <div class="card">
+    <h2>运行时状态</h2>
+    <div class="kv" id="state">加载中…</div>
+  </div>
+
+  <div class="card">
+    <h2>操作</h2>
+    <div class="row">
+      <button onclick="doRegister()">注册设备</button>
+      <button onclick="doServers()">拉取节点（实时）</button>
+      <button onclick="doProbe(null)">探测当前池</button>
+      <button class="ghost" onclick="loadSnapshot()">载入抓包快照</button>
+    </div>
+    <div class="hint">
+      注：纯 HTTP 客户端只能拿到 <code>169.254.x</code> 兜底池（不可路由）；
+      真实公网节点需 native 加密态客户端下发，见下方「抓包快照」。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>节点列表 <span id="src" class="dim"></span></h2>
+    <div style="overflow:auto">
+      <table>
+        <thead><tr>
+          <th>IP</th><th>地区</th><th>algo</th><th>类型</th>
+          <th>443</th><th>465</th><th>802</th><th>UDP</th><th>延迟</th><th></th>
+        </tr></thead>
+        <tbody id="tbody"><tr><td colspan="10" class="dim">暂无数据</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+let current = [];
+
+function cell(v, cls){ return `<td class="${cls||''}">${v ?? '-'}</td>`; }
+
+function statusClass(s){
+  if (s === 'open') return 'ok';
+  if (s === 'no-resp') return 'warn';
+  if (!s) return 'dim';
+  return 'bad';
+}
+
+function render(nodes, src){
+  current = nodes || [];
+  $('#src').textContent = src ? '· ' + src : '';
+  const tb = $('#tbody');
+  if (!current.length){
+    tb.innerHTML = '<tr><td colspan="10" class="dim">暂无数据</td></tr>';
+    return;
+  }
+  tb.innerHTML = current.map(n => {
+    const tcp = n.tcp || {};
+    const vip = n.is_vip ? '<span class="warn">VIP</span>' : '<span class="ok">FREE</span>';
+    return `<tr>
+      ${cell(n.ip)}
+      ${cell((n.country||'') + (n.area ? ' ' + n.area : ''))}
+      ${cell(n.obs_algo)}
+      ${cell(vip)}
+      ${cell(tcp[443]||'', statusClass(tcp[443]))}
+      ${cell(tcp[465]||'', statusClass(tcp[465]))}
+      ${cell(tcp[802]||'', statusClass(tcp[802]))}
+      ${cell(n.udp443||'', statusClass(n.udp443))}
+      ${cell(n.latency_ms >= 0 ? n.latency_ms + 'ms' : '-')}
+      <td><button class="ghost" onclick="doProbe(['${n.ip}'])">探测</button></td>
+    </tr>`;
+  }).join('');
+}
+
+async function loadState(){
+  const r = await fetch('/api/state'); const d = await r.json();
+  const dev = d.device;
+  $('#state').innerHTML = `
+    <span>设备注册态</span><span>${dev ? '<span class="ok">已注册</span>' : '<span class="warn">未注册</span>'}</span>
+    <span>auth_id</span><span>${dev ? dev.auth_id : '-'}</span>
+    <span>auth_token</span><span>${dev ? dev.auth_token : '-'}</span>
+    <span>设备存活</span><span>${dev ? dev.alive_hours + ' h' : '-'}</span>
+    <span>签名指纹</span><span><code>${d.signature}</code></span>
+    <span>API 网关</span><span>${d.hosts.length} 个 (t1–t6.free-signal.com)</span>
+    <span>面板运行</span><span>${d.uptime_s}s</span>`;
+}
+
+async function doRegister(){
+  const r = await fetch('/api/register', {method:'POST'});
+  const d = await r.json();
+  alert(d.ok ? `注册成功\nauth_id=${d.auth_id}\nauth_token=${d.auth_token}` : '注册失败: ' + d.error);
+  loadState();
+}
+
+async function doServers(){
+  $('#src').textContent = '· 拉取中…';
+  const r = await fetch('/api/servers'); const d = await r.json();
+  if (!d.ok){ render([], '拉取失败: ' + d.error); return; }
+  render(d.nodes, `实时 · ${d.host} · exit=${d.exit_ip} · list=${d.list}`);
+}
+
+async function doProbe(ips){
+  const r = await fetch('/api/probe', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ips: ips || []})
+  });
+  const d = await r.json();
+  if (!d.ok){ alert('探测失败: ' + d.error); return; }
+  render(d.nodes, `探测完成 · ${d.elapsed}s`);
+}
+
+async function loadSnapshot(){
+  const r = await fetch('/api/snapshot'); const d = await r.json();
+  const nodes = d.nodes || [...(d.free || []), ...(d.vip_partial || [])];
+  const m = d.meta || {};
+  render(nodes, `抓包快照 · ${m.captured_at || ''} · list=${m.list || ''} · ${nodes.length} 节点`);
+}
+
+loadState();
+loadSnapshot();
+</script>
+</body>
+</html>

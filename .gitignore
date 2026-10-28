@@ -1,0 +1,36 @@
+# 反编译产物（体积大，用 apktool / jadx 自行重建）
+apktool_out/
+jadx_out/
+thunder.apk
+*.apk
+pylibs/
+*.whl
+
+# 运行时凭证 / 中间产物
+state.json
+nodes.json
+nodes_harvest.json
+demo.log
+demo2.log
+demo3.log
+demo_run.log
+apktool.log
+jadx.log
+recon/emu.log
+recon/hook*.log
+!recon/hook3.log
+recon/*.txt
+
+# 截图（保留 demo 面板）
+recon/shot*.png
+recon/dialog_*.png
+recon/ui_*.png
+recon/final.png
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS
+.DS_Store
+Thumbs.db

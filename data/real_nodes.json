@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "source": "frida hook 抓取 App 实际响应 (HttpClients.request 返回值)",
+    "captured_at": "2026-10-29T05:15+08:00",
+    "device": "emulator-5554 (sdk_gphone_x86_64_arm64, API 30)",
+    "app": "com.fast.free.unblock.thunder.vpn v5.4.1 (202604131) Mod by ElaMods",
+    "endpoint": "https://t3.free-signal.com/v2/server/?dev_imsi=310260&dev_lang=en_US&isp_ip=183.250.230.8",
+    "note": "该分组仅在 App(native 加密态客户端) 请求时下发；纯 Python 明文客户端只能拿到 169.254.x 兜底池。",
+    "list_tag": "151:51-16:0",
+    "config": {"udp": [443], "tcp": [443, 465, 802], "tun_mtu": 1380, "dns_server": ["8.8.8.8", "1.1.1.1"]}
+  },
+  "free": [
+    {"ip": "51.38.114.253",  "country": "DE", "obs_key": "CEbwqLTyxjq7gZcH6kWmeK", "obs_algo": 1, "is_vip": false, "is_running": true},
+    {"ip": "51.195.43.172",  "country": "DE", "obs_key": "dBEtQc4WoZk4pZzKLmPxct", "obs_algo": 1, "is_vip": false, "is_running": true},
+    {"ip": "51.195.47.52",   "country": "DE", "obs_key": "iTfEYEg6NCnYse4Mwsyh94", "obs_algo": 1, "is_vip": false, "is_running": true},
+    {"ip": "57.129.118.197", "country": "DE", "obs_key": "PW3QW3oyFhrLuu7QTxwrkp", "obs_algo": 1, "is_vip": false, "is_running": true},
+    {"ip": "51.195.235.194", "country": "GB", "obs_key": "a37i8BwBt5zawub736iSmz", "obs_algo": 1, "is_vip": false, "is_running": true},
+    {"ip": "57.128.221.85",  "country": "PL", "obs_key": "CQJEfWSSpp7khA8JSkLU3U", "obs_algo": 1, "is_vip": false, "is_running": true}
+  ],
+  "vip_partial": [
+    {"ip": "107.189.10.67",  "country": "CH", "area": "Bern",  "obs_key": "dtScGgQw93pFnzekYaRzUG", "obs_algo": 1, "is_vip": true, "is_running": true},
+    {"ip": "104.244.72.212", "country": "CH", "area": "Bern",  "obs_key": "UgaUuVUN2WdZngu7bSWxxb", "obs_algo": 1, "is_vip": true, "is_running": true},
+    {"ip": "104.244.77.124", "country": "CH", "area": "Bern",  "obs_key": "kNLeRgRmqdy5qDTzyLLRrp", "obs_algo": 1, "is_vip": true, "is_running": true},
+    {"ip": "104.244.74.148", "country": "CH", "area": "Bern",  "obs_key": "NcfUhW2bS5r8rWo6e4rYgN", "obs_algo": 1, "is_vip": true, "is_running": true},
+    {"ip": "5.34.179.83",    "country": "US", "area": "Miami", "obs_key": "kLYghiMgvHpavtLiPH5Cmm", "obs_algo": 0, "is_vip": true, "is_running": true}
+  ],
+  "fallback_pool": [
+    {"ip": "169.254.9.21",    "country": "US", "area": "US East", "obs_key": "gKEWGPCSMduB7qy5sPxnqd", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.9.28",    "country": "US", "area": "US East", "obs_key": "mFUXZGui5arKIVdOtQn3kw", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.22.22",   "country": "US", "area": "US West", "obs_key": "PpPgc4zAMxv5Er3RDVnyqc", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.22.71",   "country": "US", "area": "US West", "obs_key": "MJUUnTrHQBuoQIhyfPBEbk", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.102.32",  "country": "DE", "area": "",        "obs_key": "V44Gi6sQWZ6xG7XQsHVbRL", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.102.64",  "country": "DE", "area": "",        "obs_key": "v4x8nAi2530UhVBa8XjPj7", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.37.241",  "country": "GB", "area": "",        "obs_key": "8qTnCF8nztxM8U40DcBhFt", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.37.183",  "country": "GB", "area": "",        "obs_key": "7rQwBIdI1Uqn2ei9dYazgp", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.222.108", "country": "SG", "area": "",        "obs_key": "YQV2UCgNk5ClKG220J7rAs", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.222.179", "country": "SG", "area": "",        "obs_key": "eHnfxcS8EYXkFTfRnvh4eb", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.188.124", "country": "NL", "area": "",        "obs_key": "QlTlUz0cZfa8AMyJaCO7aB", "obs_algo": 0, "is_vip": false},
+    {"ip": "169.254.188.236", "country": "NL", "area": "",        "obs_key": "2dKv07ujdwXVcTTlW8AhGw", "obs_algo": 0, "is_vip": false}
+  ]
+}

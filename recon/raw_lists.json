@@ -1,0 +1,920 @@
+{
+ "t1": {
+  "config": {
+   "dns_server": [
+    "8.8.8.8",
+    "1.1.1.1"
+   ],
+   "udp": [
+    53,
+    443,
+    9981
+   ],
+   "tun_mtu": 1380,
+   "tcp": [
+    443,
+    9981
+   ]
+  },
+  "list": "0",
+  "server": [
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "gKEWGPCSMduB7qy5sPxnqd",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.21",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 6,
+    "is_bt": false,
+    "obs_key": "mFUXZGui5arKIVdOtQn3kw",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.28",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 12,
+    "is_bt": false,
+    "obs_key": "PpPgc4zAMxv5Er3RDVnyqc",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.22",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 13,
+    "is_bt": false,
+    "obs_key": "MJUUnTrHQBuoQIhyfPBEbk",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.71",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "V44Gi6sQWZ6xG7XQsHVbRL",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.32",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "v4x8nAi2530UhVBa8XjPj7",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.64",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 11,
+    "is_bt": false,
+    "obs_key": "8qTnCF8nztxM8U40DcBhFt",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.241",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 10,
+    "is_bt": false,
+    "obs_key": "7rQwBIdI1Uqn2ei9dYazgp",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.183",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 14,
+    "is_bt": false,
+    "obs_key": "YQV2UCgNk5ClKG220J7rAs",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.108",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 16,
+    "is_bt": false,
+    "obs_key": "eHnfxcS8EYXkFTfRnvh4eb",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.179",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 4,
+    "is_bt": false,
+    "obs_key": "QlTlUz0cZfa8AMyJaCO7aB",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.124",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "2dKv07ujdwXVcTTlW8AhGw",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.236",
+    "area": "",
+    "is_running": true
+   }
+  ]
+ },
+ "t2": {
+  "config": {
+   "dns_server": [
+    "8.8.8.8",
+    "1.1.1.1"
+   ],
+   "udp": [
+    53,
+    443,
+    9981
+   ],
+   "tun_mtu": 1380,
+   "tcp": [
+    443,
+    9981
+   ]
+  },
+  "list": "0",
+  "server": [
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "gKEWGPCSMduB7qy5sPxnqd",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.21",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 6,
+    "is_bt": false,
+    "obs_key": "mFUXZGui5arKIVdOtQn3kw",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.28",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 12,
+    "is_bt": false,
+    "obs_key": "PpPgc4zAMxv5Er3RDVnyqc",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.22",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 13,
+    "is_bt": false,
+    "obs_key": "MJUUnTrHQBuoQIhyfPBEbk",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.71",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "V44Gi6sQWZ6xG7XQsHVbRL",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.32",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "v4x8nAi2530UhVBa8XjPj7",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.64",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 11,
+    "is_bt": false,
+    "obs_key": "8qTnCF8nztxM8U40DcBhFt",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.241",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 10,
+    "is_bt": false,
+    "obs_key": "7rQwBIdI1Uqn2ei9dYazgp",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.183",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 14,
+    "is_bt": false,
+    "obs_key": "YQV2UCgNk5ClKG220J7rAs",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.108",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 16,
+    "is_bt": false,
+    "obs_key": "eHnfxcS8EYXkFTfRnvh4eb",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.179",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 4,
+    "is_bt": false,
+    "obs_key": "QlTlUz0cZfa8AMyJaCO7aB",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.124",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "2dKv07ujdwXVcTTlW8AhGw",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.236",
+    "area": "",
+    "is_running": true
+   }
+  ]
+ },
+ "t3": {
+  "config": {
+   "dns_server": [
+    "8.8.8.8",
+    "1.1.1.1"
+   ],
+   "udp": [
+    53,
+    443,
+    9981
+   ],
+   "tun_mtu": 1380,
+   "tcp": [
+    443,
+    9981
+   ]
+  },
+  "list": "0",
+  "server": [
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "gKEWGPCSMduB7qy5sPxnqd",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.21",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 6,
+    "is_bt": false,
+    "obs_key": "mFUXZGui5arKIVdOtQn3kw",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.28",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 12,
+    "is_bt": false,
+    "obs_key": "PpPgc4zAMxv5Er3RDVnyqc",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.22",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 13,
+    "is_bt": false,
+    "obs_key": "MJUUnTrHQBuoQIhyfPBEbk",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.71",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "V44Gi6sQWZ6xG7XQsHVbRL",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.32",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "v4x8nAi2530UhVBa8XjPj7",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.64",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 11,
+    "is_bt": false,
+    "obs_key": "8qTnCF8nztxM8U40DcBhFt",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.241",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 10,
+    "is_bt": false,
+    "obs_key": "7rQwBIdI1Uqn2ei9dYazgp",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.183",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 14,
+    "is_bt": false,
+    "obs_key": "YQV2UCgNk5ClKG220J7rAs",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.108",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 16,
+    "is_bt": false,
+    "obs_key": "eHnfxcS8EYXkFTfRnvh4eb",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.179",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 4,
+    "is_bt": false,
+    "obs_key": "QlTlUz0cZfa8AMyJaCO7aB",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.124",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "2dKv07ujdwXVcTTlW8AhGw",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.236",
+    "area": "",
+    "is_running": true
+   }
+  ]
+ },
+ "t4": {
+  "config": {
+   "dns_server": [
+    "8.8.8.8",
+    "1.1.1.1"
+   ],
+   "udp": [
+    53,
+    443,
+    9981
+   ],
+   "tun_mtu": 1380,
+   "tcp": [
+    443,
+    9981
+   ]
+  },
+  "list": "0",
+  "server": [
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "gKEWGPCSMduB7qy5sPxnqd",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.21",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 6,
+    "is_bt": false,
+    "obs_key": "mFUXZGui5arKIVdOtQn3kw",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.28",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 12,
+    "is_bt": false,
+    "obs_key": "PpPgc4zAMxv5Er3RDVnyqc",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.22",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 13,
+    "is_bt": false,
+    "obs_key": "MJUUnTrHQBuoQIhyfPBEbk",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.71",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "V44Gi6sQWZ6xG7XQsHVbRL",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.32",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "v4x8nAi2530UhVBa8XjPj7",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.64",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 11,
+    "is_bt": false,
+    "obs_key": "8qTnCF8nztxM8U40DcBhFt",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.241",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 10,
+    "is_bt": false,
+    "obs_key": "7rQwBIdI1Uqn2ei9dYazgp",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.183",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 14,
+    "is_bt": false,
+    "obs_key": "YQV2UCgNk5ClKG220J7rAs",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.108",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 16,
+    "is_bt": false,
+    "obs_key": "eHnfxcS8EYXkFTfRnvh4eb",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.179",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 4,
+    "is_bt": false,
+    "obs_key": "QlTlUz0cZfa8AMyJaCO7aB",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.124",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "2dKv07ujdwXVcTTlW8AhGw",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.236",
+    "area": "",
+    "is_running": true
+   }
+  ]
+ },
+ "t5": {
+  "config": {
+   "dns_server": [
+    "8.8.8.8",
+    "1.1.1.1"
+   ],
+   "udp": [
+    53,
+    443,
+    9981
+   ],
+   "tun_mtu": 1380,
+   "tcp": [
+    443,
+    9981
+   ]
+  },
+  "list": "0",
+  "server": [
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "gKEWGPCSMduB7qy5sPxnqd",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.21",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 6,
+    "is_bt": false,
+    "obs_key": "mFUXZGui5arKIVdOtQn3kw",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.28",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 12,
+    "is_bt": false,
+    "obs_key": "PpPgc4zAMxv5Er3RDVnyqc",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.22",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 13,
+    "is_bt": false,
+    "obs_key": "MJUUnTrHQBuoQIhyfPBEbk",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.71",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "V44Gi6sQWZ6xG7XQsHVbRL",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.32",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "v4x8nAi2530UhVBa8XjPj7",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.64",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 11,
+    "is_bt": false,
+    "obs_key": "8qTnCF8nztxM8U40DcBhFt",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.241",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 10,
+    "is_bt": false,
+    "obs_key": "7rQwBIdI1Uqn2ei9dYazgp",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.183",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 14,
+    "is_bt": false,
+    "obs_key": "YQV2UCgNk5ClKG220J7rAs",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.108",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 16,
+    "is_bt": false,
+    "obs_key": "eHnfxcS8EYXkFTfRnvh4eb",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.179",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 4,
+    "is_bt": false,
+    "obs_key": "QlTlUz0cZfa8AMyJaCO7aB",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.124",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "2dKv07ujdwXVcTTlW8AhGw",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.236",
+    "area": "",
+    "is_running": true
+   }
+  ]
+ },
+ "t6": {
+  "config": {
+   "dns_server": [
+    "8.8.8.8",
+    "1.1.1.1"
+   ],
+   "udp": [
+    53,
+    443,
+    9981
+   ],
+   "tun_mtu": 1380,
+   "tcp": [
+    443,
+    9981
+   ]
+  },
+  "list": "0",
+  "server": [
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "gKEWGPCSMduB7qy5sPxnqd",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.21",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 6,
+    "is_bt": false,
+    "obs_key": "mFUXZGui5arKIVdOtQn3kw",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.9.28",
+    "area": "US East",
+    "is_running": true
+   },
+   {
+    "load": 12,
+    "is_bt": false,
+    "obs_key": "PpPgc4zAMxv5Er3RDVnyqc",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.22",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 13,
+    "is_bt": false,
+    "obs_key": "MJUUnTrHQBuoQIhyfPBEbk",
+    "is_vip": false,
+    "country": "US",
+    "obs_algo": 0,
+    "ip": "169.254.22.71",
+    "area": "US West",
+    "is_running": true
+   },
+   {
+    "load": 9,
+    "is_bt": false,
+    "obs_key": "V44Gi6sQWZ6xG7XQsHVbRL",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.32",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "v4x8nAi2530UhVBa8XjPj7",
+    "is_vip": false,
+    "country": "DE",
+    "obs_algo": 0,
+    "ip": "169.254.102.64",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 11,
+    "is_bt": false,
+    "obs_key": "8qTnCF8nztxM8U40DcBhFt",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.241",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 10,
+    "is_bt": false,
+    "obs_key": "7rQwBIdI1Uqn2ei9dYazgp",
+    "is_vip": false,
+    "country": "GB",
+    "obs_algo": 0,
+    "ip": "169.254.37.183",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 14,
+    "is_bt": false,
+    "obs_key": "YQV2UCgNk5ClKG220J7rAs",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.108",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 16,
+    "is_bt": false,
+    "obs_key": "eHnfxcS8EYXkFTfRnvh4eb",
+    "is_vip": false,
+    "country": "SG",
+    "obs_algo": 0,
+    "ip": "169.254.222.179",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 4,
+    "is_bt": false,
+    "obs_key": "QlTlUz0cZfa8AMyJaCO7aB",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.124",
+    "area": "",
+    "is_running": true
+   },
+   {
+    "load": 7,
+    "is_bt": false,
+    "obs_key": "2dKv07ujdwXVcTTlW8AhGw",
+    "is_vip": false,
+    "country": "NL",
+    "obs_algo": 0,
+    "ip": "169.254.188.236",
+    "area": "",
+    "is_running": true
+   }
+  ]
+ }
+}
