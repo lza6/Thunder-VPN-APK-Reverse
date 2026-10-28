@@ -3,6 +3,7 @@
 SignalLab「Thunder VPN」v5.4.1 (Mod by ElaMods) 的协议还原 + 节点池收割工具。
 
 - 📄 完整分析：[`逆向报告.md`](./逆向报告.md)
+- 🔌 **对接怎么接**：[`docs/new-api对接指南.md`](./docs/new-api对接指南.md)
 - 🎯 目标：把它变成可长期维护的节点/IP 池，供线上代理池评估
 
 ## 快速开始
@@ -35,7 +36,8 @@ python demo_server.py --port 8962
 | `data/real_nodes.json` | 抓包快照（含兜底池 12 个说明） |
 | `recon/hook*.py` | frida 动态抓包脚本（协议取证过程） |
 | `recon/probe_nodes.py` `recon/list.py` | 早期探针脚本 |
-| `apktool_out/` `jadx_out/` | 反编译产物 |
+| `docs/new-api对接指南.md` | **给对接会话的落地文档**（含 socks5 转换层约定与验收命令） |
+| `apktool_out/` `jadx_out/` | 反编译产物（不入库，自行重建） |
 
 ## 关键结论（TL;DR）
 
